@@ -26,8 +26,7 @@ public class ApiController {
     @RequestMapping(value="/serverId", method= RequestMethod.POST)
     public String serverId(){
 
-        String url = "https://api.neople.co.kr/df/servers?apikey=wv7TRdYKkynYMEHJEPVhxrCQUlbZJ2pA";
-        String result = encodeURIComponet(url);
+        String result = "https://api.neople.co.kr/df/servers?apikey=wv7TRdYKkynYMEHJEPVhxrCQUlbZJ2pA";
 
         return result;
     }
