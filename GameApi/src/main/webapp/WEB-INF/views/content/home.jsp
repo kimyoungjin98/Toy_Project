@@ -3,7 +3,7 @@
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>
 <html>
 <body>
-<div class="input_div">
+<form class="input_form">
 <select class="main_select">
     <option>전체</option>
     <option>카인</option>
@@ -15,9 +15,10 @@
     <option>안톤</option>
     <option>바칼</option>
 </select>
-    <input placeholder="닉네임을 입력하세요" class="main_input" />
-    <button class="main_button">검색</button>
-</div>
+    <input name="serverId" type="hidden" id="serverId"/>
+    <input name="Id" placeholder="닉네임을 입력하세요" class="main_input" />
+    <button class="main_button" type="button">검색</button>
+</form>
 </body>
 </html>
 <script src="${rootPath}/static/js/home.js?ver=6"></script>
