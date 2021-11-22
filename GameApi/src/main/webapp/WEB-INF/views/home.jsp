@@ -20,4 +20,4 @@
 </div>
 </body>
 </html>
-<script src="${rootPath}/static/js/home.js"></script>
+<script src="${rootPath}/static/js/home.js?ver=6"></script>
