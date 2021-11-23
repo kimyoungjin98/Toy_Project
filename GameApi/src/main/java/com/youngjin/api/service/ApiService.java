@@ -1,17 +1,43 @@
 package com.youngjin.api.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.parser.ParseException;
+import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.util.List;
 
+@Slf4j
 public abstract class ApiService<VO> {
 
     public abstract String queryURL(String serverId, String characterId);
+
+    // URL Encoding method
+    protected static String encodeURIComponent(String component)   {
+
+        String result = null;
+
+        try {
+            result = URLEncoder.encode(component, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            result = component;
+        }
+
+        return result;
+    }
+
+    // 캐릭터 이미지 url 받아오기
+    protected String imgUrl(String serverId, String characterId){
+        String url = "https://img-api.neople.co.kr/df/servers/" + serverId + "/characters/" + characterId + "?zoom=<zoom>";
+
+        return url;
+    }
 
     public String jsonString(String queryURL) throws IOException {
 
@@ -39,10 +65,13 @@ public abstract class ApiService<VO> {
         }
         buffer.close();
 
+        log.debug("JSON 데이터 : {}", stringBuffer.toString());
+
         return stringBuffer.toString();
     }
 
     public abstract List<VO> getList(String jsonString) throws ParseException;
     public abstract VO getData(String jsonString);
+    public abstract List<VO> getEquip(String jsonString) throws ParseException;
 
 }

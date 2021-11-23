@@ -1,0 +1,30 @@
+.result_list{
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:70rem;
+}
+
+.list_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.name, .server{
+    margin:0 10px;
+}
+
+.name{
+    font-size:20px;
+}
+
+.job{
+    font-size:12px;
+}
+
+.server{
+    color:gray;
+    font-size:12px;
+}

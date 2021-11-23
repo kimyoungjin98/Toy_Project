@@ -1,0 +1,38 @@
+input.main_input{
+    display:inline-block;
+    outline: none;
+    width:40rem;
+    padding:0.5rem;
+    border:1px solid gray;
+}
+
+button.main_button{
+    display: inline-block;
+    outline: none;
+    padding:1rem;
+    background-color: white;
+    color:black;
+    border:1px solid gray;
+    cursor: pointer;
+}
+
+button.main_button:hover{
+    background-color: black;
+    color:white;
+    transition: 0.5s;
+}
+
+form.input_form{
+
+    justify-content: center;
+    text-align: center;
+    display:flex;
+    margin:5rem;
+    padding:5rem;
+
+}
+
+select{
+    padding:1rem;
+    outline:none;
+}

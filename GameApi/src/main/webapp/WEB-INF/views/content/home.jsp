@@ -3,7 +3,7 @@
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>
 <html>
 <body>
-<form class="input_form">
+<form class="input_form" action="${rootPath}/list">
 <select class="main_select">
     <option>전체</option>
     <option>카인</option>

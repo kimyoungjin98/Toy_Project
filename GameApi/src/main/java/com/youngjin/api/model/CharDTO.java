@@ -2,6 +2,8 @@ package com.youngjin.api.model;
 
 import lombok.*;
 
+import java.util.Map;
+
 @Getter
 @Setter
 @AllArgsConstructor
@@ -18,13 +20,11 @@ public class CharDTO {
     private String jobGrowId;
     private String jobName;
     private String jobGrowName;
+    private String img;
 
     private String adventureName;
-    private String imgUrl(String serverId, String characterId){
-        String url = "https://img-api.neople.co.kr/df/servers/" + serverId + "/characters/" + characterId + "?zoom=<zoom>";
-
-        return url;
-    }
+    private Map<String, String> buff;
+    private Map<String, String> status;
 
 
 }
