@@ -7,10 +7,12 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class EquipServiceImplV1 extends ApiService<EquipDTO> {
     @Override
     public String queryURL(String serverId, String characterId) {

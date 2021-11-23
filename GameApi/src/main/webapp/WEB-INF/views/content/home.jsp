@@ -16,7 +16,7 @@
     <option>바칼</option>
 </select>
     <input name="serverId" type="hidden" id="serverId"/>
-    <input name="Id" placeholder="닉네임을 입력하세요" class="main_input" />
+    <input name="characterId" placeholder="닉네임을 입력하세요" class="main_input" />
     <button class="main_button" type="button">검색</button>
 </form>
 </body>

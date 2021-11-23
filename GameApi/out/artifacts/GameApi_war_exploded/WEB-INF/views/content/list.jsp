@@ -4,6 +4,7 @@
 <html>
 <body>
 <section class="result_list">
+    <div class="modal"></div>
 <c:forEach var="CHAR" items="${CHAR}">
 <div class="list_div" data-id="${CHAR.characterId}" data-server="${CHAR.serverId}">
     <img src="${CHAR.img}">
