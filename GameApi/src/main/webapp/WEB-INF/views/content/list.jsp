@@ -4,8 +4,8 @@
 <html>
 <body>
 <section class="result_list">
-    <div class="modal"></div>
-    <section class="modal_section"></section>
+    <div class="modal" onclick="onClick()"></div>
+    <div class="modal_result"></div>
 <c:forEach var="CHAR" items="${CHAR}">
 <div class="list_div"
      data-id="${CHAR.characterId}"
@@ -22,18 +22,20 @@
 </body>
 <script type="text/javascript">
     const modal = document.querySelector(".modal")
-    const modal_section = document.querySelector(".modal_section")
+    const modal_result = document.querySelector(".modal_result")
 
-    document.querySelector("section.result_list").addEventListener("click", (e)=>{
+    // modal 백그라운드 div를 클릭할 경우 데이터를 지우고 display none
+    const onClick = ()=>{
+        if(modal.style.display == "flex"){
+            modal.style.display = "none";
+            modal_result.innerHTML = "";
+            modal_result.display = "none";
+        }
+    }
+
+    document.querySelector(".result_list").addEventListener("click", (e)=>{
 
         let tagName = e.target.tagName
-
-        // modal 백그라운드 div를 클릭할 경우 데이터를 지우고 display none
-        if(tagName === "DIV" && modal.style.display == "flex"){
-            modal.style.display = "none";
-            modal_section.innerHTML = "";
-            modal_section.display = "none";
-        }
 
         if(tagName === "IMG"){
 
@@ -46,14 +48,12 @@
 
             const equip_url = `${rootPath}/modal/equip/` + server + "/" + characterId + "/" + characterName
 
-            console.log(equip_url)
-
             fetch(equip_url)
                 .then(res=>res.text())
                 .then(res=>{
                     if(res != null && res != ""){
-                        modal_section.innerHTML = res;
-                        modal_section.style.display = "flex"
+                        modal_result.innerHTML = res;
+                        modal_result.style.display = "flex"
                     }
                 })
 
