@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Slf4j
-@Service
+@Service("apiServiceV1")
 public class ApiServiceImplV1 extends ApiService<CharDTO> {
 
     @Override
@@ -31,6 +31,8 @@ public class ApiServiceImplV1 extends ApiService<CharDTO> {
 
         String queryURL = "https://api.neople.co.kr/df/servers/" + serverId + "/characters?characterName=" + encCharacterId + "&apikey=";
         queryURL += ApiConfig.apiKey;
+
+        log.debug("URL : " + queryURL);
 
         return queryURL;
     }
@@ -74,7 +76,8 @@ public class ApiServiceImplV1 extends ApiService<CharDTO> {
     }
 
     @Override
-    public CharDTO getData(String jsonString) {
+    public CharDTO getData(String jsonString) throws ParseException {
+
         return null;
     }
 

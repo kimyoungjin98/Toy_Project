@@ -2,7 +2,6 @@ package com.youngjin.api.service;
 
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.parser.ParseException;
-import org.slf4j.LoggerFactory;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -71,7 +70,7 @@ public abstract class ApiService<VO> {
     }
 
     public abstract List<VO> getList(String jsonString) throws ParseException;
-    public abstract VO getData(String jsonString);
+    public abstract VO getData(String jsonString) throws ParseException;
     public abstract List<VO> getEquip(String jsonString) throws ParseException;
 
 }

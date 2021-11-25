@@ -39,3 +39,35 @@
     position: fixed;
     background-color: black;
 }
+
+.modal_section{
+    top: 90px;
+    display: none;
+    padding: 40px;
+    height: 70vh;
+    z-index: 100;
+    width:100vw;
+    position: fixed;
+    overflow: auto;
+    text-align: center;
+    background-color: white;
+}
+
+.div_info {
+    margin:10px;
+    display: flex;
+}
+
+.div_info img{
+    width:30vw;
+    height:35vw;
+}
+
+.div_info label{
+    margin:0 5px;
+}
+
+table td{
+    text-align: center;
+    margin: 5px;
+}

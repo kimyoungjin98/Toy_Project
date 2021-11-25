@@ -3,6 +3,7 @@ package com.youngjin.api.service.impl;
 import com.youngjin.api.config.ApiConfig;
 import com.youngjin.api.model.EquipDTO;
 import com.youngjin.api.service.ApiService;
+import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -12,8 +13,10 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
+@Slf4j
+@Service("equipServiceV1")
 public class EquipServiceImplV1 extends ApiService<EquipDTO> {
+
     @Override
     public String queryURL(String serverId, String characterId) {
 
@@ -21,6 +24,8 @@ public class EquipServiceImplV1 extends ApiService<EquipDTO> {
 
         String queryURL = "https://api.neople.co.kr/df/servers/" + serverId + "/characters/" + encCharacterId +"/equip/equipment?apikey=";
         queryURL += ApiConfig.apiKey;
+
+        log.debug("EQUIP URL : " + queryURL);
 
         return queryURL;
     }
@@ -40,7 +45,7 @@ public class EquipServiceImplV1 extends ApiService<EquipDTO> {
             JSONParser jsonParser = new JSONParser();
 
             JSONObject jsonObject = (JSONObject) jsonParser.parse(jsonString);
-            JSONArray jsonArray = (JSONArray) jsonObject.get("rows");
+            JSONArray jsonArray = (JSONArray) jsonObject.get("equipment");
 
             List<EquipDTO> equipList = new ArrayList<>();
 
@@ -53,13 +58,20 @@ public class EquipServiceImplV1 extends ApiService<EquipDTO> {
                 String itemType = String.valueOf(object.get("itemType"));
                 String itemTypeDetail = String.valueOf(object.get("itemTypeDetail"));
                 String itemAvailableLevel = String.valueOf(object.get("itemAvailableLevel"));
-                String itemRarity = String.valueOf("itemRarity");
-                String itemGradeName = String.valueOf("itemGradeName");
+                String itemRarity = String.valueOf(object.get("itemRarity"));
+                String itemGradeName = String.valueOf(object.get("itemGradeName"));
+                String itemName = String.valueOf(object.get("itemName"));
+                String setItemId = String.valueOf(object.get("setItemId"));
+                String setItemName = String.valueOf(object.get("setItemName"));
+
 
                 EquipDTO equipDTO = EquipDTO.builder()
                         .slotId(slotId)
                         .slotName(slotName)
                         .itemId(itemId)
+                        .itemName(itemName)
+                        .setItemName(setItemName)
+                        .setItemId(setItemId)
                         .itemType(itemType)
                         .itemTypeDetail(itemTypeDetail)
                         .itemAvailableLevel(itemAvailableLevel)
@@ -68,8 +80,10 @@ public class EquipServiceImplV1 extends ApiService<EquipDTO> {
                         .build();
 
                 equipList.add(equipDTO);
+
             }
 
-            return equipList;
+
+        return equipList;
     }
 }

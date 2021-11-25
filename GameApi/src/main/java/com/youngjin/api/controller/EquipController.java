@@ -1,21 +1,15 @@
 package com.youngjin.api.controller;
 
+import com.youngjin.api.dao.CharDao;
 import com.youngjin.api.dao.EquipDao;
 import com.youngjin.api.model.CharDTO;
 import com.youngjin.api.model.EquipDTO;
-import com.youngjin.api.service.ApiService;
-import com.youngjin.api.service.impl.ApiServiceImplV1;
-import com.youngjin.api.service.impl.EquipServiceImplV1;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.parser.ParseException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.util.List;
@@ -26,18 +20,24 @@ import java.util.List;
 public class EquipController {
 
     protected final EquipDao eDao;
+    protected final CharDao cDao;
 
-    @ResponseBody
-    @RequestMapping(value="/modal/equip", method = RequestMethod.GET)
-    public String modal(@RequestParam("serverId") String serverId, @RequestParam("characterId") String characterId,
+    // URI 주소로 보낸 파라메터 순서와 맵핑 파라메터 순서가 다르면 X
+    @RequestMapping(value="/modal/equip/{server}/{characterId}/{characterName}", method = RequestMethod.GET)
+    public String modal(@PathVariable("characterId") String characterId,
+                        @PathVariable("characterName") String characterName,
+                        @PathVariable("server") String server,
                         Model model) throws IOException, ParseException {
 
-        List<EquipDTO> eList =  eDao.getList(serverId, characterId);
-        if(eList != null){
-            model.addAttribute("EQUIPLIST", eList);
-            return "OK";
+        List<EquipDTO> eList = eDao.getList(server, characterId);
+        CharDTO charDTO = cDao.getList(server, characterName).get(0);
+
+        if (eList != null && charDTO != null) {
+            model.addAttribute("EQUIP", eList);
+            model.addAttribute("DETAIL", charDTO);
+            return "modal";
         } else{
-            return "FAIL";
+            return "redirect:/";
         }
 
     }

@@ -10,7 +10,7 @@
 </head>
 <link rel="stylesheet" href="${rootPath}/static/css/main.css?ver=1">
 <link rel="stylesheet" href="${rootPath}/static/css/home.css?ver=1">
-<link rel="stylesheet" href="${rootPath}/static/css/list.css?ver=1">
+<link rel="stylesheet" href="${rootPath}/static/css/list.css?ver=2">
 <body>
     <tiles:insertAttribute name="nav"/>
     <tiles:insertAttribute name="header"/>

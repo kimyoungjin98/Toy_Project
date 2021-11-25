@@ -13,6 +13,7 @@ public class EquipDTO {
     private String slotId;
     private String slotName;
     private String itemId;
+    private String itemName;
     private String itemType;
     private String itemTypeDetail;
     private String itemAvailableLevel;
