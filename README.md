@@ -5,4 +5,4 @@
 ### Neople API Project
 
 - GameAPI
-- Neople 에서 제공하는 API를 이용한 Spring MVC 
+- Neople 에서 제공하는 API를 이용한 Spring MVC 패턴의 프로젝트
