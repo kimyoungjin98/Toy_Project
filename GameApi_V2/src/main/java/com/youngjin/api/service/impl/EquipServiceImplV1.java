@@ -1,6 +1,7 @@
 package com.youngjin.api.service.impl;
 
 import com.youngjin.api.config.ApiConfig;
+import com.youngjin.api.config.ApiKeyConfig;
 import com.youngjin.api.model.EquipDTO;
 import com.youngjin.api.service.ApiService;
 import lombok.extern.slf4j.Slf4j;
@@ -23,7 +24,7 @@ public class EquipServiceImplV1 extends ApiService<EquipDTO> {
         String encCharacterId = encodeURIComponent(characterId);
 
         String queryURL = "https://api.neople.co.kr/df/servers/" + serverId + "/characters/" + encCharacterId +"/equip/equipment?apikey=";
-        queryURL += ApiConfig.apiKey;
+        queryURL += ApiKeyConfig.apiKey;
 
         log.debug("EQUIP URL : " + queryURL);
 

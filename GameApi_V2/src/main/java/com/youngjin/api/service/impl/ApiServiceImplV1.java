@@ -1,6 +1,7 @@
 package com.youngjin.api.service.impl;
 
 import com.youngjin.api.config.ApiConfig;
+import com.youngjin.api.config.ApiKeyConfig;
 import com.youngjin.api.model.CharDTO;
 import com.youngjin.api.model.EquipDTO;
 import com.youngjin.api.service.ApiService;
@@ -30,7 +31,7 @@ public class ApiServiceImplV1 extends ApiService<CharDTO> {
         String encCharacterId = encodeURIComponent(characterId);
 
         String queryURL = "https://api.neople.co.kr/df/servers/" + serverId + "/characters?characterName=" + encCharacterId + "&apikey=";
-        queryURL += ApiConfig.apiKey;
+        queryURL += ApiKeyConfig.apiKey;
 
         log.debug("URL : " + queryURL);
 
