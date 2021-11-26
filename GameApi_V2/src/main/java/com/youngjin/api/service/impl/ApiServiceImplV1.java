@@ -1,9 +1,7 @@
 package com.youngjin.api.service.impl;
 
-import com.youngjin.api.config.ApiConfig;
 import com.youngjin.api.config.ApiKeyConfig;
 import com.youngjin.api.model.CharDTO;
-import com.youngjin.api.model.EquipDTO;
 import com.youngjin.api.service.ApiService;
 import lombok.extern.slf4j.Slf4j;
 import org.json.simple.JSONArray;
@@ -12,8 +10,6 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.springframework.stereotype.Service;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 

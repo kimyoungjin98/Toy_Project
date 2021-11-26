@@ -1,6 +1,5 @@
 package com.youngjin.api.service.impl;
 
-import com.youngjin.api.config.ApiConfig;
 import com.youngjin.api.config.ApiKeyConfig;
 import com.youngjin.api.model.EquipDTO;
 import com.youngjin.api.service.ApiService;
