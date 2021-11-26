@@ -2,7 +2,7 @@
 
 - 개발 실력 향상을 위한 개인 토이 프로젝트 
 
-### Neople API Project
+### 1. Neople API Project
 
 - GameAPI
 - Neople 에서 제공하는 API를 이용한 Spring MVC 패턴의 던전앤파이터 캐릭터 정보 검색 프로젝트
