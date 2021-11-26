@@ -21,4 +21,4 @@
 </form>
 </body>
 </html>
-<script src="${rootPath}/static/js/home.js?ver=6"></script>
+<script src="${rootPath}/static/js/home.js?ver=7"></script>
