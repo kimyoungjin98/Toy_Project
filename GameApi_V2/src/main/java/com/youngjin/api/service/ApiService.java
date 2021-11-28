@@ -64,8 +64,6 @@ public abstract class ApiService<VO> {
         }
         buffer.close();
 
-        log.debug("JSON 데이터 : {}", stringBuffer.toString());
-
         return stringBuffer.toString();
     }
 
