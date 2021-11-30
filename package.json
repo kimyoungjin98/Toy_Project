@@ -1,0 +1,22 @@
+{
+  "name": "toy_project",
+  "version": "1.0.0",
+  "description": "- 개발 실력 향상을 위한 개인 토이 프로젝트",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kimyoungjin98/Toy_Project.git"
+  },
+  "keywords": [
+    "q"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kimyoungjin98/Toy_Project/issues"
+  },
+  "homepage": "https://github.com/kimyoungjin98/Toy_Project#readme"
+}

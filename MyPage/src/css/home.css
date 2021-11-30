@@ -1,0 +1,11 @@
+.home_div {
+  padding: 30vh;
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.home_section p {
+  font-size: 50px;
+  color: white;
+}
