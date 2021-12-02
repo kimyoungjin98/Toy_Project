@@ -1,0 +1,44 @@
+.item_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+.item_section div {
+  width: 60vw;
+  background-color: white;
+  height: 3vw;
+  color: black;
+}
+
+.item_div {
+  display: flex;
+  flex-direction: row;
+  animation: ani_right 0.2s ease;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.item_div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item_div div:nth-of-type(1) {
+  color: red;
+  cursor: pointer;
+}
+
+.item_div div:nth-of-type(3) {
+  color: green;
+  cursor: pointer;
+}
+
+div.content_comp {
+  text-decoration-line: line-through;
+}

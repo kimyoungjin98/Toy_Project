@@ -2,17 +2,17 @@ import React from "react";
 import { useTodoContext } from "../context/TodoContextProvider";
 
 const TodoInput = () => {
-  const { todo, onClick, onChange } = useTodoContext();
+  const { todo, todoInsert, todoChange } = useTodoContext();
 
   return (
     <div className="input_div">
       <input
         placeholder="할일을 입력하세요"
         className="todo_input"
-        onChange={onChange}
+        onChange={todoChange}
         value={todo.t_content}
       />
-      <button onClick={onClick}>추가</button>
+      <button onClick={todoInsert}>추가</button>
     </div>
   );
 };

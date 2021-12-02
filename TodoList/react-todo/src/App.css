@@ -5,7 +5,50 @@
   margin: 0;
   padding: 0;
   font-family: "Nanum Gothic", sans-serif;
-  overflow: auto;
+}
+
+@keyframes ani_down {
+  0% {
+    transform: translateY(-50%);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ani_up {
+  0% {
+    transform: translateY(50%);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ani_right {
+  0% {
+    transform: translateX(50%);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade_out {
+  0% {
+    transform: translateY(100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
 }
 
 .App {
@@ -28,59 +71,5 @@ header {
 header p {
   font-size: 80px;
   font-weight: 100;
-}
-
-ul {
-  display: flex;
-  list-style: none;
-  padding: 5vh;
-  color: white;
-}
-
-li {
-  margin-left: auto;
-  cursor: pointer;
-  font-size: 40px;
-}
-
-.input_div input,
-.input_div button {
-  font-weight: bold;
-  display: inline-block;
-  outline: none;
-  border: none;
-  padding: 2vh;
-}
-
-.input_div input {
-  width: 50vw;
-  font-size: 20px;
-}
-
-.input_div button {
-  width: 10vw;
-  font-size: 21px;
-  background-color: rgb(31, 138, 88);
-  color: white;
-  cursor: pointer;
-}
-
-.todo_list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
-}
-
-.todo_list div {
-  width: 60vw;
-  background-color: white;
-  height: 3vw;
-  color: black;
-}
-
-.item_div {
-  display: flex;
-  flex-direction: row;
+  animation: ani_down 0.4s;
 }

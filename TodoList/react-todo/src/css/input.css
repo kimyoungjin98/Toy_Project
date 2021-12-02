@@ -1,0 +1,26 @@
+.input_div input,
+.input_div button {
+  font-weight: bold;
+  display: inline-block;
+  outline: none;
+  border: none;
+  padding: 2vh;
+  animation: ani_right 0.4s ease;
+}
+
+.input_div input {
+  width: 50vw;
+  font-size: 20px;
+}
+
+.input_div button {
+  width: 10vw;
+  font-size: 21px;
+  background-color: rgb(31, 138, 88);
+  color: white;
+  cursor: pointer;
+}
+
+.list_button {
+  margin: 5px;
+}

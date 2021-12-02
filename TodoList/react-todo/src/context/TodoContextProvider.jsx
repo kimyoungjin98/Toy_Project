@@ -7,7 +7,6 @@ export const useTodoContext = () => {
 
 const TodoContextProvider = ({ children }) => {
   const seq = useRef(0);
-
   // 1개의 todo
   const [todo, setTodo] = useState({
     t_seq: 0, // 시퀀스
@@ -18,22 +17,29 @@ const TodoContextProvider = ({ children }) => {
   // todo를 담을 list
   const [todoList, setTodoList] = useState([]);
 
-  const onChange = (e) => {
+  const todoChange = (e) => {
     const t_content = e.target.value;
-    setTodo({ ...todo, t_content });
+    setTodo({ ...todo, t_content, t_seq: seq.current });
   };
 
-  const onClick = () => {
+  const todoInsert = () => {
     setTodoList([...todoList, todo]);
+    seq.current++;
+
+    const item_div = document.querySelector("div.item_div");
+    const input_div = document.querySelector("div.input_div");
+    const list_button = document.querySelector("button.list_button");
   };
+
+  const todo_comp = () => {};
 
   const props = {
     todo,
     setTodo,
     todoList,
     setTodoList,
-    onChange,
-    onClick,
+    todoChange,
+    todoInsert,
   };
 
   return <todoContext.Provider value={props}>{children}</todoContext.Provider>;

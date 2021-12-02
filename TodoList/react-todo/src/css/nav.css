@@ -1,0 +1,48 @@
+ul.main_nav {
+  display: flex;
+  list-style: none;
+  padding: 5vh;
+  color: white;
+  animation: ani_down 0.4s ease;
+}
+
+ul.main_nav li {
+  margin-left: auto;
+  cursor: pointer;
+  font-size: 40px;
+}
+
+/* 숨어있는 내비 css */
+
+div.hidden_div {
+  visibility: hidden;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.active {
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+ul.hidden_nav {
+  display: flex;
+  background-color: rgb(31, 138, 88);
+  position: fixed;
+  width: 100%;
+  padding: 2vh;
+  color: white;
+  right: 0;
+  align-items: center;
+  font-weight: bold;
+  list-style: none;
+}
+
+ul.hidden_nav li {
+  font-size: 20px;
+}
+
+.nav_login,
+.nav_join {
+  cursor: pointer;
+}
