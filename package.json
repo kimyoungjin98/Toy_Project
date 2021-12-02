@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/kimyoungjin98/Toy_Project/issues"
   },
-  "homepage": "https://github.com/kimyoungjin98/Toy_Project#readme"
+  "homepage": "https://github.com/kimyoungjin98/Toy_Project#readme",
+  "dependencies": {
+    "create-react-app": "^4.0.3"
+  }
 }
