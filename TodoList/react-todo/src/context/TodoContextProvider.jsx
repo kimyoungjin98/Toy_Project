@@ -19,19 +19,38 @@ const TodoContextProvider = ({ children }) => {
 
   const todoChange = (e) => {
     const t_content = e.target.value;
-    setTodo({ ...todo, t_content, t_seq: seq.current });
+    const t_seq = seq.current;
+    setTodo({ ...todo, t_content, t_seq });
   };
 
   const todoInsert = () => {
+    if (todo.t_content == "") {
+      alert("할일을 입력하세요 !");
+      return false;
+    }
     setTodoList([...todoList, todo]);
     seq.current++;
-
-    const item_div = document.querySelector("div.item_div");
-    const input_div = document.querySelector("div.input_div");
-    const list_button = document.querySelector("button.list_button");
+    setTodo({ ...todo, t_content: "" }); // input value 초기화
   };
 
-  const todo_comp = () => {};
+  const todoComplete = (e) => {
+    const seq = e.target.dataset.seq;
+    const index = todoList.findIndex((todo) => {
+      return todo.t_seq == seq;
+    });
+    const comp_todo = todoList[index];
+    const _todoList = [...todoList];
+    _todoList[index] = { ...comp_todo, t_comp: !comp_todo.t_comp };
+    setTodoList(_todoList);
+  };
+
+  const todoDelete = (e) => {
+    const seq = e.target.dataset.seq;
+    const dTodo_list = todoList.filter((item) => {
+      return item.t_seq != seq;
+    });
+    setTodoList(dTodo_list);
+  };
 
   const props = {
     todo,
@@ -40,6 +59,8 @@ const TodoContextProvider = ({ children }) => {
     setTodoList,
     todoChange,
     todoInsert,
+    todoComplete,
+    todoDelete,
   };
 
   return <todoContext.Provider value={props}>{children}</todoContext.Provider>;

@@ -34,9 +34,12 @@
   cursor: pointer;
 }
 
+.item_div div:nth-of-type(2) {
+  cursor: pointer;
+}
+
 .item_div div:nth-of-type(3) {
   color: green;
-  cursor: pointer;
 }
 
 div.content_comp {
