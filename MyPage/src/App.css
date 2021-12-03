@@ -1,6 +1,16 @@
 .App {
   text-align: center;
 }
+
+/* 스크롤바 없애기 */
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+body {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap");
 
 * {

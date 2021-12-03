@@ -1,8 +1,12 @@
 nav {
   display: flex;
-  background: linear-gradient(to right, #005c97, #363795);
-  color: white;
+  /* background: linear-gradient(to right, #005c97, #363795); */
+  background-color: white;
+  color: rgba(0, 0, 0, 1);
   width: 100%;
+  border-bottom: 2px solid black;
+  transition: 0.5s ease;
+  position: fixed;
 }
 
 ul {
@@ -16,4 +20,30 @@ li {
   font-weight: bold;
   margin: 35px;
   cursor: pointer;
+}
+
+#nav_acitve {
+  color: cornflowerblue;
+  transition: 0.5s;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3vh;
+  height: 10vh;
+  border-top: 1px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
