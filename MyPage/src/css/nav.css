@@ -2,29 +2,38 @@ nav {
   display: flex;
   /* background: linear-gradient(to right, #005c97, #363795); */
   background-color: white;
-  color: rgba(0, 0, 0, 1);
   width: 100%;
-  border-bottom: 2px solid black;
   transition: 0.5s ease;
   position: fixed;
+  padding: 3vh;
+  height: 10vh;
+  z-index: 1;
 }
 
 ul {
   display: flex;
   list-style: none;
   margin-left: auto;
+  align-items: center;
 }
 
 li {
   font-size: 20px;
   font-weight: bold;
-  margin: 35px;
   cursor: pointer;
+  padding: 5vh;
+  color: rgb(158, 157, 157);
 }
 
-#nav_acitve {
-  color: cornflowerblue;
-  transition: 0.5s;
+li:hover {
+  font-size: 25px;
+  transition: 0.3s;
+}
+
+#li_hover {
+  font-size: 25px;
+  transition: 0.3s;
+  color: rgb(82, 80, 80);
 }
 
 footer {
@@ -35,9 +44,10 @@ footer {
   padding: 3vh;
   height: 10vh;
   border-top: 1px solid black;
-  color: black;
+  color: rgb(233, 233, 233);
   font-weight: bold;
   font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 footer div {

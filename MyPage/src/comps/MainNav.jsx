@@ -16,7 +16,9 @@ const MainNav = () => {
   return (
     <nav>
       <ul onClick={navClick}>
-        <li className="home">HOME</li>
+        <li className="home" id="li_hover">
+          HOME
+        </li>
         <li className="about">ABOUT</li>
         <li className="project">PROJECT</li>
       </ul>

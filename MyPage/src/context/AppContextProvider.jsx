@@ -4,24 +4,46 @@ const appContext = createContext();
 export const useAppContext = () => useContext(appContext);
 
 const AppContextProvider = ({ children }) => {
-  const [scrollY, setScrollY] = useState(0);
+  const [scrollY, setScrollY] = useState(0); // 기본 스크롤 저장 state
+  const compList = ["home", "about", "project"];
+
+  let isScroll = false;
+  const comp_scroll = (e) => {
+    if (!isScroll) {
+      const nav = document.querySelector("nav");
+      const navBottom = nav.getBoundingClientRect().bottom;
+      const comp = document.elementFromPoint(0, navBottom);
+
+      const compName = compList.filter((compName) => {
+        return compName == comp.id;
+      });
+
+      nav_style(compName[0]);
+      isScroll = true;
+    }
+  };
 
   const window_scroll = () => {
     setScrollY(window.pageYOffset);
+    comp_scroll();
+  };
+
+  const nav_style = (className) => {
+    document.getElementById("li_hover").setAttribute("id", "");
+    const target_li = document.querySelector("." + className);
+    target_li.setAttribute("id", "li_hover");
   };
 
   const navClick = (e) => {
     const tagName = e.target.tagName;
 
     if (tagName === "LI") {
-      // css 적용하기
-      e.target.setAttribute("id", "nav_active");
-
       // 여기서부터는 네비로 스크롤 움직이기
       const className = e.target.className;
       const comp = document.querySelector("#" + className);
       const compBound = comp.getBoundingClientRect();
       const compTop = compBound.top;
+
       window.scrollBy({
         top: compTop,
         left: 0,
