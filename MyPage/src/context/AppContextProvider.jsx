@@ -5,7 +5,7 @@ export const useAppContext = () => useContext(appContext);
 
 const AppContextProvider = ({ children }) => {
   const [scrollY, setScrollY] = useState(0); // 기본 스크롤 저장 state
-  const compList = ["home", "about", "project"];
+  const compList = ["home", "about", "project", "skill", "contact"];
 
   let isScroll = false;
   const comp_scroll = (e) => {

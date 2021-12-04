@@ -4,7 +4,8 @@
   align-items: center;
   justify-content: center;
   padding: 10vh;
-  height: 90vh;
+  height: 100vh;
   width: 100%;
   border-bottom: 1px solid gray;
+  background: linear-gradient(to right, #f19340, #f2c94c);
 }

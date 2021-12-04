@@ -3,8 +3,9 @@ import Home from "./Home";
 import Project from "./Project";
 import About from "./About";
 import Nav from "./MainNav";
-import MainFooter from "./MainFooter";
+import Skill from "./Skill";
 import AppContextProvider from "../context/AppContextProvider";
+import Contact from "./Contact";
 
 const Container = () => {
   return (
@@ -13,8 +14,9 @@ const Container = () => {
         <Nav />
         <Home />
         <About />
+        <Skill />
         <Project />
-        <MainFooter />
+        <Contact />
       </AppContextProvider>
     </div>
   );

@@ -15,12 +15,15 @@ const MainNav = () => {
 
   return (
     <nav>
+      <p className="logo">영진's 포트폴리오</p>
       <ul onClick={navClick}>
         <li className="home" id="li_hover">
           HOME
         </li>
         <li className="about">ABOUT</li>
+        <li className="skill">SKILLS</li>
         <li className="project">PROJECT</li>
+        <li className="contact">CONTACT</li>
       </ul>
     </nav>
   );

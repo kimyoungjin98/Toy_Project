@@ -1,0 +1,13 @@
+.skill_div {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid gray;
+  position: relative;
+  background: linear-gradient(to right, #e44d26, #f16529);
+}

@@ -1,0 +1,21 @@
+.contact_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 10vh;
+  height: 100vh;
+  border-top: 1px solid black;
+  color: rgb(233, 233, 233);
+  font-weight: bold;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact_div div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}

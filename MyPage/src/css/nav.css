@@ -8,13 +8,20 @@ nav {
   padding: 3vh;
   height: 10vh;
   z-index: 1;
+  border-bottom: 3px solid gray;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+p.logo {
+  font-size: 30px;
+  color: rgb(82, 80, 80);
 }
 
 ul {
   display: flex;
   list-style: none;
-  margin-left: auto;
   align-items: center;
+  margin-left: auto;
 }
 
 li {
@@ -34,26 +41,4 @@ li:hover {
   font-size: 25px;
   transition: 0.3s;
   color: rgb(82, 80, 80);
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 3vh;
-  height: 10vh;
-  border-top: 1px solid black;
-  color: rgb(233, 233, 233);
-  font-weight: bold;
-  font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-footer div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
 }
