@@ -1,13 +1,12 @@
 nav {
   display: flex;
-  background-color: white;
   width: 100%;
   transition: 0.5s ease;
+  background-color: #ffff;
   position: fixed;
   padding: 3vh;
   height: 10vh;
-  z-index: 1;
-  border-bottom: 3px solid gray;
+  border-bottom: 2px solid gray;
   font-family: "Nanum Gothic", sans-serif;
   visibility: hidden;
   opacity: 0;
@@ -16,7 +15,8 @@ nav {
 .nav_active {
   visibility: visible;
   transition: 0.5s;
-  opacity: 1;
+  opacity: 0.9;
+  z-index: 1;
 }
 
 p.logo {
@@ -36,7 +36,7 @@ li {
   font-weight: bold;
   cursor: pointer;
   padding: 5vh;
-  color: rgb(158, 157, 157);
+  color: rgb(121, 121, 121);
 }
 
 li:hover {
@@ -47,5 +47,5 @@ li:hover {
 #li_hover {
   font-size: 25px;
   transition: 0.3s;
-  color: rgb(82, 80, 80);
+  color: rgb(46, 45, 45);
 }

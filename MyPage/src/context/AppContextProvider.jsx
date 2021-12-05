@@ -18,7 +18,7 @@ const AppContextProvider = ({ children }) => {
         return compName == comp.id;
       });
 
-      nav_style(compName[0]);
+      nav_style(compName);
       isScroll = true;
     }
   };

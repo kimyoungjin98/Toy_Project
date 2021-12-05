@@ -21,47 +21,35 @@ const Skill = () => {
         <div className="content1">
           <div className="java">
             <img src={java} />
-            <span>Java</span>
           </div>
           <div className="kotlin">
             <img src={kotlin} />
-            <span>Kotlin</span>
           </div>
           <div className="javascript">
             <img src={javascript} />
-            <span>javascript</span>
           </div>
         </div>
         <div className="content2">
           <div className="html">
             <img src={html} />
-            <span>HTML</span>
           </div>
           <div className="css">
             <img src={css} />
-            <span>CSS</span>
           </div>
         </div>
       </div>
       <div className="skill_content2">
         <div className="content1">
-          <div className="spring">
-            <img src={spring} />
-            <span>Spring</span>
-          </div>
           <div className="boot">
             <img src={springBoot} />
-            <span>Spring Boot</span>
           </div>
         </div>
         <div className="content2">
           <div className="react">
             <img src={reactIcon} />
-            <span>React.js</span>
           </div>
           <div className="nodejs">
             <img src={nodejs} />
-            <span>Node.js</span>
           </div>
         </div>
       </div>
@@ -69,17 +57,14 @@ const Skill = () => {
         <div className="content1">
           <div className="oracle">
             <img src={oracle} />
-            <span>Oracle</span>
           </div>
           <div className="mysql">
             <img src={mysql} />
-            <span>MySQL</span>
           </div>
         </div>
         <div className="content2">
           <div className="mongo">
             <img src={mongoDB} />
-            <span>MongoDB</span>
           </div>
         </div>
       </div>

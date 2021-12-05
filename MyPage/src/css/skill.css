@@ -8,24 +8,23 @@
   width: 100%;
   text-align: center;
   position: relative;
-  background-color: rgba(212, 133, 28, 0.8);
   font-family: "paybooc-Bold";
 }
 
 .skill_div img {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 150px;
   margin: 5px;
 }
 
 .boot img {
-  width: 200px;
+  width: 250px;
 }
 
 .oracle img,
 .mysql img,
 .mongo img {
-  width: 150px;
+  width: 250px;
 }
 
 .skill_logo {
@@ -42,7 +41,7 @@
 .skill_content3 {
   background-color: white;
   padding: 5vh;
-  border-radius: 20px;
+  border-radius: 15px;
   width: 50vh;
   height: 70vh;
   margin: 20px;
