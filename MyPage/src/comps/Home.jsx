@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useAppContext } from "../context/AppContextProvider";
 import "../css/home.css";
 
 const Home = () => {
@@ -42,8 +43,8 @@ const Home = () => {
     <div className="home_div" id="home">
       <section className="home_section">
         <div>
-          <p className="p1">반갑습니다 !</p>
-          <p className="p2">웹 개발자 김영진 입니다</p>
+          <p className="p1">Welcome !</p>
+          <p className="p2">Web Developer Youngjin Kim's page</p>
           <p className="copy_p1"></p>
           <p className="copy_p2"></p>
         </div>

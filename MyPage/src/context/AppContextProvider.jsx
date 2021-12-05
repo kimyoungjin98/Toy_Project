@@ -25,13 +25,22 @@ const AppContextProvider = ({ children }) => {
 
   const window_scroll = () => {
     setScrollY(window.pageYOffset);
+    const nav = document.querySelector("nav");
+    if (scrollY > 100) {
+      nav.classList.add("nav_active");
+    } else if (scrollY < 100) {
+      nav.classList.remove("nav_active");
+    }
+
     comp_scroll();
   };
 
   const nav_style = (className) => {
     document.getElementById("li_hover").setAttribute("id", "");
     const target_li = document.querySelector("." + className);
-    target_li.setAttribute("id", "li_hover");
+    if (target_li) {
+      target_li.setAttribute("id", "li_hover");
+    }
   };
 
   const navClick = (e) => {

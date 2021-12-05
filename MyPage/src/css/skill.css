@@ -7,7 +7,64 @@
   height: 100vh;
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid gray;
   position: relative;
-  background: linear-gradient(to right, #e44d26, #f16529);
+  background-color: rgba(212, 133, 28, 0.8);
+  font-family: "paybooc-Bold";
+}
+
+.skill_div img {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}
+
+.boot img {
+  width: 200px;
+}
+
+.oracle img,
+.mysql img,
+.mongo img {
+  width: 150px;
+}
+
+.skill_logo {
+  font-size: 50px;
+  font-weight: bold;
+  font-family: "paybooc-Bold";
+  color: white;
+  position: relative;
+  top: -30px;
+}
+
+.skill_content1,
+.skill_content2,
+.skill_content3 {
+  background-color: white;
+  padding: 5vh;
+  border-radius: 20px;
+  width: 50vh;
+  height: 70vh;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.content1,
+.content2 {
+  display: flex;
+  justify-content: center;
+  margin: 5vh;
+}
+
+.content1 div,
+.content2 div {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 }

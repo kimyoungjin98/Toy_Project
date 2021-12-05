@@ -1,6 +1,5 @@
 nav {
   display: flex;
-  /* background: linear-gradient(to right, #005c97, #363795); */
   background-color: white;
   width: 100%;
   transition: 0.5s ease;
@@ -10,6 +9,14 @@ nav {
   z-index: 1;
   border-bottom: 3px solid gray;
   font-family: "Nanum Gothic", sans-serif;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav_active {
+  visibility: visible;
+  transition: 0.5s;
+  opacity: 1;
 }
 
 p.logo {

@@ -14,6 +14,14 @@ body {
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Noto+Sans+KR&family=Song+Myung&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Jua&display=swap");
 
+@font-face {
+  font-family: "paybooc-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 @keyframes ani_down {
   0% {
     transform: translateY(-50%);
