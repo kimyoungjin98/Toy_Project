@@ -6,6 +6,7 @@ import Nav from "./MainNav";
 import Skill from "./Skill";
 import AppContextProvider from "../context/AppContextProvider";
 import Contact from "./Contact";
+import ProContextProvider from "../context/ProContextProvider";
 
 const Container = () => {
   return (
@@ -15,7 +16,9 @@ const Container = () => {
         <Home />
         <About />
         <Skill />
-        <Project />
+        <ProContextProvider>
+          <Project />
+        </ProContextProvider>
         <Contact />
       </AppContextProvider>
     </div>

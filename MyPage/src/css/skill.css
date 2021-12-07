@@ -14,16 +14,14 @@
 .skill_div img {
   width: 130px;
   height: 150px;
-  margin: 5px;
+  margin: 10px;
 }
 
-.boot img {
-  width: 250px;
-}
-
+.boot img,
 .oracle img,
 .mysql img,
-.mongo img {
+.mongo img,
+.fireBase img {
   width: 250px;
 }
 

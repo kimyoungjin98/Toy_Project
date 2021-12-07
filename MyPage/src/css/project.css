@@ -7,4 +7,48 @@
   height: 100vh;
   width: 100%;
   position: relative;
+  text-align: left;
+  font-family: "paybooc-Bold";
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.icon_left,
+.icon_right {
+  cursor: pointer;
+}
+
+.pro_section {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  margin: 15vh;
+  overflow: hidden;
+  width: 115vh;
+}
+
+.project1,
+.project2,
+.project3 {
+  margin: 10px;
+}
+
+.pro_content,
+.pro_img {
+  margin: 10px;
+}
+
+.pro_content {
+  border-left: 3px solid gray;
+}
+
+.pro_content p {
+  margin: 10px 20px;
+  color: rgb(58, 58, 58);
+}
+
+.pro_img img {
+  border: 3px solid gray;
+  width: 110vh;
+  height: 40vh;
 }

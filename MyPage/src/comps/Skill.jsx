@@ -1,7 +1,6 @@
 import React from "react";
 import { useAppContext } from "../context/AppContextProvider";
 import "../css/skill.css";
-import spring from "../svg/spring-icon.svg";
 import springBoot from "../svg/spring.svg";
 import java from "../svg/java.svg";
 import kotlin from "../svg/kotlin.svg";
@@ -13,6 +12,7 @@ import oracle from "../svg/oracle.svg";
 import html from "../svg/html-5.svg";
 import css from "../svg/css-3.svg";
 import mongoDB from "../svg/mongodb.svg";
+import fireBase from "../svg/firebase.svg";
 
 const Skill = () => {
   return (
@@ -65,6 +65,9 @@ const Skill = () => {
         <div className="content2">
           <div className="mongo">
             <img src={mongoDB} />
+          </div>
+          <div className="fireBase">
+            <img src={fireBase} />
           </div>
         </div>
       </div>
