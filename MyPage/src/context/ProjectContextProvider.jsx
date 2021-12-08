@@ -8,6 +8,7 @@ const appContext = createContext();
 export const useProContext = () => useContext(appContext);
 
 const ProjectContextProvider = ({ children }) => {
+  // 리스트를 저장할 state 선언
   const [project, setProject] = useState([
     {
       name: "말랑",
@@ -38,6 +39,7 @@ const ProjectContextProvider = ({ children }) => {
     },
   ]);
 
+  // 컴포넌트에서 사용할 값을 저장할 state 선언
   const [content, setContent] = useState({
     name: "",
     category: "",
@@ -47,40 +49,35 @@ const ProjectContextProvider = ({ children }) => {
     image: "",
   });
 
-  const transition = () => {
-    const project_div = document.querySelector(".project");
-    project_div.style.opacity = "0.5";
-    project_div.style.transition = "0.5s ease";
-    setTimeout(() => {
-      project_div.style.opacity = "1";
-    }, 1000);
-  };
+  // 애니메이션 적용 위해 컴포넌트를 가져옴
+  const project_div = document.querySelector(".project");
 
   const make_project = () => {
     setContent(project[0]);
   };
 
   const prev = () => {
-    const copyContent = { ...content };
     const length = project.length;
-    setContent(project[length - 1]);
 
+    // 배열의 마지막 값 가져오기
+    const lastContent = project[length - 1];
+
+    // 배열의 마지막 값 삭제한 리스트 저장
     const _project = project.filter((pro) => {
-      return pro.name != copyContent.name;
+      return pro.name != lastContent.name;
     });
-    console.log(_project);
-    const _length = _project.length;
-    _project[_length] = copyContent;
+
+    // 저장한 리스트 앞에 추가하기
+    _project.unshift(lastContent);
     setProject(_project);
   };
 
   const next = () => {
+    project_div.classList.add("pro_active");
     const copyContent = { ...content };
     const _project = project.filter((pro) => {
       return pro.name != copyContent.name;
     });
-    setContent(_project[0]);
-
     setProject([..._project, copyContent]);
   };
 

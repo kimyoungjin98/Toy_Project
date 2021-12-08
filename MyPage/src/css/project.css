@@ -28,6 +28,10 @@
   height: 50vh;
 }
 
+.project {
+  animation: slide 0.5s;
+}
+
 .pro_content,
 .pro_img {
   margin: 10px;

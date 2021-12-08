@@ -31,6 +31,21 @@ body::-webkit-scrollbar {
   font-style: normal;
 }
 
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @keyframes ani_down {
   0% {
     transform: translateY(-50%);
