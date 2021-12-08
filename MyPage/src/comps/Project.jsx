@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
-import { useProContext } from "../context/ProContextProvider";
 import "../css/project.css";
 import malang from "../img/말랑.jpg";
 
 const Project = () => {
-  const { prev, next } = useProContext();
-
   return (
     <div className="pro_div" id="project">
-      <div className="icon_left" onClick={prev}>
+      <div className="icon_left">
         <i class="fas fa-chevron-left fa-4x"></i>
       </div>
       <section className="pro_section">
@@ -90,7 +87,7 @@ const Project = () => {
           </div>
         </div>
       </section>
-      <div className="icon_right" onClick={next}>
+      <div className="icon_right">
         <i class="fas fa-chevron-right fa-4x"></i>
       </div>
     </div>
