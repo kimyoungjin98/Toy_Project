@@ -20,6 +20,9 @@
   bottom: 0;
   position: absolute;
   content: "";
+
+  /* 배경이미지 위치 고정 */
+  background-attachment: fixed;
 }
 
 .home_section {

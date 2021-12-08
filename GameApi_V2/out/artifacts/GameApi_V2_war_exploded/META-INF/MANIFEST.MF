@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
-Built-By: young-can-u
-Build-Jdk: Azul Zulu Community™ version 15.0.4
+Built-By: User
+Build-Jdk: 15.0.2
 

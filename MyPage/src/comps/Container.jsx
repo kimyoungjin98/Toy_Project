@@ -6,6 +6,7 @@ import {
   Nav,
   Skill,
   AppContextProvider,
+  ProjectContextProvider,
   Contact,
 } from "../config/index";
 
@@ -17,7 +18,9 @@ const Container = () => {
         <Home />
         <About />
         <Skill />
-        <Project />
+        <ProjectContextProvider>
+          <Project />
+        </ProjectContextProvider>
         <Contact />
       </AppContextProvider>
     </div>

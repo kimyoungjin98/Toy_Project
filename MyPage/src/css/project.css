@@ -22,15 +22,10 @@
   display: flex;
   align-items: center;
   align-content: center;
+  justify-content: center;
   margin: 15vh;
-  overflow: hidden;
   width: 115vh;
-}
-
-.project1,
-.project2,
-.project3 {
-  margin: 10px;
+  height: 50vh;
 }
 
 .pro_content,
@@ -40,6 +35,7 @@
 
 .pro_content {
   border-left: 3px solid gray;
+  width: 100vh;
 }
 
 .pro_content p {
@@ -47,8 +43,12 @@
   color: rgb(58, 58, 58);
 }
 
+.pro_img {
+  text-align: center;
+}
+
 .pro_img img {
   border: 3px solid gray;
-  width: 110vh;
-  height: 40vh;
+  width: 100vh;
+  height: 55vh;
 }
