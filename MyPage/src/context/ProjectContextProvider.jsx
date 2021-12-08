@@ -47,6 +47,15 @@ const ProjectContextProvider = ({ children }) => {
     image: "",
   });
 
+  const transition = () => {
+    const project_div = document.querySelector(".project");
+    project_div.style.opacity = "0.5";
+    project_div.style.transition = "0.5s ease";
+    setTimeout(() => {
+      project_div.style.opacity = "1";
+    }, 1000);
+  };
+
   const make_project = () => {
     setContent(project[0]);
   };
@@ -71,6 +80,7 @@ const ProjectContextProvider = ({ children }) => {
       return pro.name != copyContent.name;
     });
     setContent(_project[0]);
+
     setProject([..._project, copyContent]);
   };
 
