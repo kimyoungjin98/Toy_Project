@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { useAppContext } from "../context/AppContextProvider";
 import "../css/home.css";
+import homeImg from "../img/giphy.gif";
 
 const Home = () => {
   const home_load = () => {

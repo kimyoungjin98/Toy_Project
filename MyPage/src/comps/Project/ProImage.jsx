@@ -1,5 +1,6 @@
-import React, { lazy, Suspense } from "react";
+import React, { Suspense } from "react";
 import Loader from "react-loader-spinner";
+import LazyImg from "../LazyImg";
 
 const ProImage = ({ image }) => {
   return (
@@ -11,9 +12,7 @@ const ProImage = ({ image }) => {
           </div>
         }
       >
-        <lazy>
-          <img src={image}></img>
-        </lazy>
+        <LazyImg src={image} />
       </Suspense>
     </div>
   );
