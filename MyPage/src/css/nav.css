@@ -2,50 +2,45 @@ nav {
   display: flex;
   width: 100%;
   transition: 0.5s ease;
-  background-color: #ffff;
+  background-color: black;
   position: fixed;
   padding: 3vh;
-  height: 10vh;
+  height: 5vh;
   border-bottom: 2px solid gray;
-  font-family: "Nanum Gothic", sans-serif;
+  font-family: "S-CoreDream-1Thin";
+  font-weight: 100;
   visibility: hidden;
   opacity: 0;
+  justify-content: center;
 }
 
 .nav_active {
   visibility: visible;
   transition: 0.5s;
-  opacity: 0.9;
+  opacity: 0.8;
   z-index: 1;
-}
-
-p.logo {
-  font-size: 30px;
-  color: rgb(82, 80, 80);
 }
 
 ul {
   display: flex;
   list-style: none;
   align-items: center;
-  margin-left: auto;
+  align-content: center;
+  justify-content: center;
 }
 
 li {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 25px;
   cursor: pointer;
-  padding: 5vh;
-  color: rgb(121, 121, 121);
+  margin: 7vh;
+  color: white;
 }
 
 li:hover {
-  font-size: 25px;
-  transition: 0.3s;
+  font-weight: bold;
 }
 
 #li_hover {
-  font-size: 25px;
-  transition: 0.3s;
-  color: rgb(46, 45, 45);
+  font-weight: bold;
+  border-bottom: 3px solid white;
 }

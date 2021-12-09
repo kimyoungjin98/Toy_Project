@@ -1,5 +1,6 @@
-import React, { useCallback, useEffect, useState } from "react";
-import { useProContext } from "../context/ProjectContextProvider";
+import React, { useEffect } from "react";
+import ProImage from "./ProImage";
+import { useProContext } from "../../context/ProjectContextProvider";
 
 const ProjectContent = () => {
   const { make_project, content } = useProContext();
@@ -11,9 +12,7 @@ const ProjectContent = () => {
     // 다른 컴포넌트가 렌더링 되었다 생각하고 리렌더링을 한다
     // => 텍스트가 바뀔 때마다 애니메이션이 적용됨
     <div className="project" key={content.name}>
-      <div className="pro_img">
-        <img src={content.image} />
-      </div>
+      <ProImage image={content.image} />
       <div className="pro_content">
         <p>이름 : {content.name}</p>
         <p>분류 : {content.category}</p>

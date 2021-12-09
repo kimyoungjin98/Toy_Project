@@ -10,6 +10,8 @@ import html from "../svg/html-5.svg";
 import css from "../svg/css-3.svg";
 import mongoDB from "../svg/mongodb.svg";
 import fireBase from "../svg/firebase.svg";
+import github from "../svg/github-icon.svg";
+import facebook from "../svg/facebook.svg";
 
 export {
   springBoot,
@@ -24,4 +26,6 @@ export {
   css,
   reactIcon,
   nodejs,
+  github,
+  facebook,
 };

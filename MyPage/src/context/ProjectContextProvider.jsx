@@ -1,13 +1,15 @@
 import React, { createContext, useContext, useState, useRef } from "react";
-import malang from "../img/말랑.jpg";
+import malang from "../img/말랑.gif";
 import DF from "../img/던파.gif";
 import todo from "../img/투두리스트.gif";
-import { FormControlUnstyledContext } from "@mui/base";
+import { useAppContext } from "./AppContextProvider";
 
 const appContext = createContext();
 export const useProContext = () => useContext(appContext);
 
 const ProjectContextProvider = ({ children }) => {
+  const { loading, setLoading } = useAppContext();
+
   // 리스트를 저장할 state 선언
   const [project, setProject] = useState([
     {
@@ -89,6 +91,8 @@ const ProjectContextProvider = ({ children }) => {
     make_project,
     next,
     prev,
+    loading,
+    setLoading,
   };
 
   return <appContext.Provider value={props}>{children}</appContext.Provider>;

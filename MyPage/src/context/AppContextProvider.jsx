@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useRef, useState } from "react";
 
 const appContext = createContext();
 export const useAppContext = () => useContext(appContext);
@@ -7,19 +7,22 @@ const AppContextProvider = ({ children }) => {
   const [scrollY, setScrollY] = useState(0); // 기본 스크롤 저장 state
   const compList = ["home", "about", "project", "skill", "contact"];
 
-  let isScroll = false;
   const comp_scroll = (e) => {
+    let isScroll = false;
     if (!isScroll) {
-      const nav = document.querySelector("nav");
-      const navBottom = nav.getBoundingClientRect().bottom;
-      const comp = document.elementFromPoint(0, navBottom);
-
-      const compName = compList.filter((compName) => {
-        return compName == comp.id;
-      });
-
-      nav_style(compName);
       isScroll = true;
+      requestAnimationFrame(() => {
+        const nav = document.querySelector("nav");
+        const navBottom = nav.getBoundingClientRect().bottom;
+        const comp = document.elementFromPoint(0, navBottom);
+
+        const compName = compList.filter((compName) => {
+          return compName == comp.id;
+        });
+
+        nav_style(compName);
+        isScroll = false;
+      });
     }
   };
 
@@ -50,14 +53,16 @@ const AppContextProvider = ({ children }) => {
       // 여기서부터는 네비로 스크롤 움직이기
       const className = e.target.className;
       const comp = document.querySelector("#" + className);
-      const compBound = comp.getBoundingClientRect();
-      const compTop = compBound.top;
+      if (comp) {
+        const compBound = comp.getBoundingClientRect();
+        const compTop = compBound.top;
 
-      window.scrollBy({
-        top: compTop,
-        left: 0,
-        behavior: "smooth",
-      });
+        window.scrollBy({
+          top: compTop,
+          left: 0,
+          behavior: "smooth",
+        });
+      }
     }
   };
 

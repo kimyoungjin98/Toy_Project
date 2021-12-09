@@ -6,6 +6,54 @@
   padding: 10vh;
   height: 100vh;
   color: rgb(233, 233, 233);
-  font-weight: bold;
   font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.788);
+  font-family: "S-CoreDream-1Thin";
+  flex-direction: column;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: black;
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  top: 22vh;
+}
+
+.contact_content {
+  display: flex;
+}
+
+.contact_logo,
+.contact_title {
+  margin: 5vh;
+}
+
+.contact_logo {
+  display: flex;
+}
+
+.contact_title {
+  margin: 5vh;
+  display: flex;
+}
+
+.contact_logo_text,
+.contact_title {
+  font-size: 50px;
+}
+
+.thx_text {
+  font-size: 60px;
+  margin: 5vh;
+}
+
+.contact_title img {
+  width: 60px;
+  margin: 10px;
+  cursor: pointer;
 }
