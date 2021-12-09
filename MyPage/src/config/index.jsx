@@ -1,6 +1,6 @@
 import Home from "../comps/Home";
 import Project from "../comps/Project/Project";
-import About from "../comps/About";
+import About from "../comps/About/About";
 import Nav from "../comps/MainNav";
 import Skill from "../comps/Skill";
 import Contact from "../comps/Contact/Contact";

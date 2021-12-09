@@ -19,7 +19,7 @@ const MainNav = () => {
     <nav>
       <ul onClick={navClick}>
         <li className="home" id="li_hover">
-          Home
+          HOME
         </li>
         <li className="about">ABOUT</li>
         <li className="skill">SKILL</li>

@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import "../css/home.css";
-import homeImg from "../img/giphy.gif";
 
 const Home = () => {
   const home_load = () => {
@@ -33,8 +32,8 @@ const Home = () => {
       }
     };
 
-    setInterval(typing1, 100);
-    setInterval(typing2, 100);
+    setInterval(typing1, 50);
+    setInterval(typing2, 50);
   };
 
   useEffect(home_load);

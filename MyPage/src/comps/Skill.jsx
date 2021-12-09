@@ -1,5 +1,4 @@
 import React from "react";
-import { useAppContext } from "../context/AppContextProvider";
 import "../css/skill.css";
 import {
   springBoot,

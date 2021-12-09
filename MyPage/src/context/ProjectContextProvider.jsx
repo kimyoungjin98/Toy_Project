@@ -52,7 +52,7 @@ const ProjectContextProvider = ({ children }) => {
   });
 
   // 애니메이션 적용 위해 컴포넌트를 가져옴
-  const project_div = document.querySelector(".project");
+  const project_div = document.querySelector(".project_container");
 
   const make_project = () => {
     setContent(project[0]);

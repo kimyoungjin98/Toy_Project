@@ -41,6 +41,7 @@ const AppContextProvider = ({ children }) => {
   const nav_style = (className) => {
     document.getElementById("li_hover").setAttribute("id", "");
     const target_li = document.querySelector("." + className);
+    console.log(target_li);
     if (target_li) {
       target_li.setAttribute("id", "li_hover");
     }

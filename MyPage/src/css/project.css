@@ -34,7 +34,7 @@
   height: 50vh;
 }
 
-.project {
+.project_container {
   animation: slide 0.5s;
 }
 
